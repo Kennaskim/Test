@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="css folder/file_5.css" rel="stylesheet">
+    <script src="Scripts Folder/login.js"></script>
+    
+</head>
+
+<body >
+    <div class="backgroundimg"></div>
+    <form class="form4">
+        <h3>Login Here</h3>
+        <div class="form4">
+            <label for="username">Username</label>
+            <input type="email" placeholder="Email" id="username" required />
+        </div>
+        <div class="form4">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" required />
+        </div>
+        <div class="form4">
+            <button type="button" onclick="func()">Log in</button>
+        </div>
+
+
+
+        <script>
+            function func() {
+                var email = document.getElementById("username").value;
+                var pass = document.getElementById("password").value;
+                
+                if (email === 'enter@gmail.com' && pass === '12345') {
+                    alert("Login successful!");
+                    window.location.assign("Tenants.html");
+                } else {
+                    alert("Invalid password");
+                }
+            }
+        </script>
+    </form>
+</body>
+
+</html>

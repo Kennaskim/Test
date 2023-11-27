@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Room Vacating</title>
+        <link href="css folder/file_4.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img class="img1" src="images/Real Estate Symbols Clipart Transparent Background, Real Estate Logo Concept Of Eye And House Vector, Line Art, Black, Vector Art PNG Image For Free Download.jpeg" alt="logo">
+            <h1>LEGEND'S RENTAL HOUSES</h1>
+            <div class="p1">
+                <a href="Homepage.html">Home</a>            
+             </div>
+        </header>
+        <h2><b>House Vacating</b></h2>
+        <hr>
+        <form action="" class="form3" method="get" onsubmit="return validateForm()">
+            <div class="form3">
+                <label for="name">Tenant's Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form3">
+                <label for="date">Select date</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            <div class="form3">
+                <label for="room">Input Room number</label>
+                <input type="number" name="room" id="room" required>
+            </div>
+            <div class="form3">
+                <button type="submit">Submit</button>
+            </div>
+            
+                 <script>
+            function validateForm() {
+                var selectedDate = new Date(document.getElementById('date').value);
+                var currentDate = new Date();
+
+                // Simple validation to check if the selected date is in the future
+                if (selectedDate <= currentDate) {
+                    document.getElementById('error-message').innerHTML = 'Please select a future date.';
+                    return false;
+                } else {
+                    document.getElementById('error-message').innerHTML = '';
+                    alert('Form submitted successfully!'); // You can replace this with your desired action
+                    return true;
+                }
+            }
+        </script>
+        </form>
+        <footer>
+            <p>Contact us at: <a href="mailto:info@legendsrentals.com">info@legendsrentals.com</a></p>
+            <p>Follow us on social media: 
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+            </p>
+        </footer>
+    </body>
+</html>
